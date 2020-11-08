@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Declan Hollingworth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>HI, I'M DECLAN HOLLINGWORTH</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+            
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Code1.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://github.com/wowitsdeclan">
+                            <img src="images/logos/github-10-512.png">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            GitHub
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Books.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.linkedin.com/in/declan-w-hollingworth/">
+                            <img src="images/logos/linkedin-logo-white.png">
+                            </a>    
+                        </div>
+
+                        <div class="subtitle">
+                            Linkedin
+                        </div>
+
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Code2.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="languages.html">
+                            <img src="images/logos/edit-2-512.png">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Languages and Libraries
+                        </div>
+
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Library.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="courses.html">
+                            <img src="images/logos/school-512.png">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Courses I've Taken
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/SetUp.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">                        
+                            <a href="myHardware.html">
+                            <img src="images/logos/keyboard-4-512.png">       
+                            </a>       
+                        </div>
+                        <div class="subtitle">
+                            My Hardware
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Toronto.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="resume.html">
+                            <img src="images/logos/book-512.png">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Resume
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem .addEventListener('mouseover', () => {
+            /*console.log(portfolioItem.childNodes[1].classList); */   
+            portfolioItem.childNodes[1].classList.add('img-darken');
+
+        })
+        portfolioItem .addEventListener('mouseout', () => {
+            /*console.log(portfolioItem.childNodes[1].classList); */   
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+
+        })
+    })
+</script>
+
+</html>
+
+
+

@@ -1,0 +1,319 @@
+/*Master Styles */
+
+
+body {
+    margin: 0px;
+    font-family: "Oswald", sans-serif;
+    background: linear-gradient(-45deg, #d4bdb6fa, #dad1d5, #cbe0e7, #767978);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.container {
+    display:grid;
+    grid-template-columns: 1fr; /*1fr is fractional unit*/
+}
+
+/* Nav Styles */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between; /* Spaces Items using distance of screen*/
+    padding: 38px; /* Creates padding border of 38px*/
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div { /*Used to traverse a tree*/
+    margin-right: 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.nav-wrapper > .right-side > div { /*Used to traverse a tree*/
+    color:black;
+    font-size: 1.6em;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s; /*Creates Transition for the border*/  
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover { /*Used for psuedostates*/
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important; /* !important overrides default */
+}
+
+/* Portfolio Styles */ 
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+
+}
+
+.portfolio-img-background {
+    height: 435px;
+    width: 100%;
+    background-size: cover;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    /*-webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
+    filter: grayscale(100%);*/
+}
+
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.img-text-wrapper .subtitle{
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color:white;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+
+/* About page styles */
+
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 68%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+
+}
+
+/* Hardware page styles */
+
+
+.profile-info-wrapper {
+    text-align: center;
+}
+
+.three-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profile-components-wrapper {
+    padding: 30px;
+    align-items: center;
+}
+
+.profile-components-wrapper h2 {
+    color: nlack;
+}
+
+.profile-peripherals-wrapper {
+    padding: 30px;
+    align-items: center;
+
+}
+
+.profile-peripherals-wrapper h2 {
+    color: black;
+}
+
+.profile-other-wrapper {
+    padding: 30px;
+    align-items: center;
+}
+
+.profile-other-wrapper h2 {
+    color: black
+}
+
+
+/* Courses Page Styles */
+.one-column-wrapper {
+    display: grid;
+    align-items: center;
+}
+
+
+.profile-courses-wrapper {
+    text-align: center;
+}
+
+.profile-courses-wrapper h3 {
+    color:black;
+}
+
+.profile-courses-wrapper ul {
+    display: inline-block; 
+    text-align: left;
+}
+
+/* Resume Page Styles */
+.profile-resume-wrapper {
+    text-align: center;
+}
+
+.profile-resume-wrapper h3 {
+    color: black;
+}
+
+.profile-resume-wrapper ul {
+    display: inline-block; 
+    text-align: left;
+}
+
+/* Languages Page Styles */
+.five-column-wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.language-wrapper {
+    align-items: center;
+    
+}
+.language-html-wrapper img{
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.language-css-wrapper img{
+    height: 200px;
+    width: 40%;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.language-javascript-wrapper img{
+    height: 200px;
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.language-python-wrapper img{
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.language-java-wrapper img{
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.language-openpyxl-wrapper img{
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.language-robot-wrapper img{
+    height: 200px;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.language-selenium-wrapper img{
+    height: 200px;
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.language-pygame-wrapper img{
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.language-matplot-wrapper img{
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 30px;
+
+}
+
+.subtitle {
+    align-items: center;
+}
+
+/* About Me Page Styles */
+.one-column-wrapper img{
+    width: 25%;
+    margin-bottom: 10px;
+    padding: 0px;
+    align-items: center;
+    border: 5px solid #555;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
